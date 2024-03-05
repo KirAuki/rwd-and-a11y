@@ -1,0 +1,128 @@
+.contact-us {
+    background-color: $primary;
+    border-radius: 35px 35px 0px 0px;
+    color: white;
+    
+    &__wrapper {
+        display: block;
+        margin-top:110px ;
+        padding: 100px 0 50px;
+        @media (width >= 770px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (width >= 1050px) {
+            padding: 100px  0 134px 130px;
+            
+        }
+        @media (width >= 1500px) {
+            max-width: 1500px;
+            margin: 0 auto;
+          }
+    }
+    &__content {
+        max-width: 320px;
+        margin: 0 auto;
+        @media (width >= 770px) {
+            padding-left:25px;
+            max-width: 400px;
+        }
+        @media (width >= 1050px) {
+            padding-left: 0; 
+            margin: unset;
+        }
+    }
+    &__title {
+        font-family: "Mulish bold";
+        font-size: 1.5em;
+        line-height: 100%;
+        @media (width >= 1050px) {
+        font-size: 2em;
+        line-height: 58px;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+        line-height: 103%;
+        max-width: 305px;
+    }
+
+    &__form {
+        color: $primary;
+        display: block;
+        margin: 35px auto;
+    }
+
+    &__input {
+        all: unset;
+        display: block;
+        margin: 15px 0;
+        padding: 10px 20px;
+        width: 280px;
+        min-height: 60px;
+        background: white;
+        border-radius: 10px;
+        &textarea {
+            min-width: 290px;
+        }
+        @media (width >= 1050px) {
+        min-width: 350px;
+        }
+        &::placeholder {
+            color: inherit;
+        }
+    }
+    &__privacy {
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        label {
+            color: white;
+        }
+    }
+
+    &__checkbox {
+        width: 24px;
+        height: 24px;
+      }
+    &__label {
+        display: block;
+        a {
+          text-decoration: underline;
+          color: white;
+          font-size: 1rem;
+          &:focus, &:hover {
+            color: red;
+          }
+        }
+
+    }
+    
+    &__btn {
+        all: unset;
+        cursor: pointer;
+        display: block;
+        margin: 35px 0;
+        height: 60px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 10px;
+        color: black;
+        font-size: 1em;
+        line-height: 100%;
+        text-align: center;
+        transition: background-color .3s, color .3s;
+        &:hover, &:focus {
+          background-color:#C7D3FF;
+          color: #ffffff;
+        }
+        
+        
+    }
+
+    &__img {
+        max-width: 100%; 
+    }
+}

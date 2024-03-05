@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Document</title>
+</head>
+<body class="ajax__body">
+    <div class="container">
+        <a href="index.html">На главную</a>
+        <h1>Галерея</h1>
+        <div class="loader"></div>
+        <div class="grid"> </div>
+        <button class="btn">Обновить</button>
+        <div class="notif">
+            <p class="notif__message">sadasdsa</p>
+        </div>
+        <form class="form">
+            <label for="audnum">Номер аудитории</label>
+            <input type="text" name="class" id="audnum">
+            <label for="temp">Температура</label>
+            <input type="number" step="0.1" name="temp" id="temp">
+            <button class="subBtn" value="Отправить" type="submit">Отправить</button>
+        </form>
+    </div>
+    <script src="js/ajax.js"></script> 
+</body>
+</html>

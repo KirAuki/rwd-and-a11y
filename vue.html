@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Document</title>
+</head>
+<body class="vue__body">
+    <a href="index.html">На главную</a>
+    <div id="app">
+            <label for="notes__text">Новая запись</label>
+            <textarea :class="{'red': 144 < charCount}" class='notes__text' wrap="hard"  v-on:input="checkNote" v-model="inputNote"></textarea>
+            <div class="notes__d">
+                <button class="notes__btn" :class="{'disabled': btnDisabled}" :disabled="btnDisabled" @click="createNote">Добавить</button>
+                <p  :class="{'red': 144 < charCount ,'yellow': 144 - charCount <= 10} " v-show="charCount>1">{{charCount}} / 144</p>
+            </div>
+            <div v-if="notes.length==0"><h2>Нет записей</h2></div>
+            <div v-else-if="notes.length==1"><h2>Запись</h2></div>
+            <div class="notes__count" v-else><h2>Записи</h2><p v-show="notesCount>1">{{notesCount}}</p></div>
+        <ul class="notes__list">
+            <li class="note" v-for="note in notes" :key="note.note">
+                 <p class="note__text">{{note.note}}</p>
+                 <p class="note__date">{{note.date}}</p>
+                <button class='delete' tabindex="0"  @click="deleteNote">X</button>
+            </li>
+        </ul>  
+    </div>
+    
+    <script src="/js/vue.js"></script>        
+</body>
+</html>
+
+

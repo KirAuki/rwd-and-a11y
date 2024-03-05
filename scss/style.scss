@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'fonts';
+@import 'additional';
+@import 'header';
+@import 'boat-loading';
+@import 'services';
+@import 'optional-services';
+@import 'contact-us';
+@import 'toast';
+@import 'anime';
+@import 'ajax';
+@import 'vue';
+@import 'footer';
+
+@include font-face('Inter reg', 400, normal, '/fonts/Inter-Regular.ttf');
+@include font-face('Mulish semibold', 600, normal, '/fonts/Mulish-SemiBold.ttf' );
+@include font-face('Mulish bold', 700, normal, '/fonts/Mulish-Bold.ttf' );
+
+body {
+    font-family: 'Inter reg';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.wrapper {
+  @media (width >= 1500px) {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+}
+
+.body__skip-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    transform: translateY(-100%);
+    color: $primary;
+    &:focus {
+      transform: translateY(0);
+    }
+}

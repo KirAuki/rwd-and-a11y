@@ -1,0 +1,36 @@
+.anime__body {
+    background-color: #232529;
+    color: white;
+    text-decoration: none;
+    &__container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 50vw;
+      margin: 300px auto;
+    }
+    &__el {
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+    }
+    & a {
+      color: red;
+    }
+    &__btn {
+      margin: 200px auto ;
+      text-align: center;
+      padding: 30px 30px;
+      width: 200px;
+      display: block;
+      border-color: white;
+      border-radius: 20px;
+      background-color: #41454c;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #696e79;
+      }
+    }
+}

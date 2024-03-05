@@ -1,0 +1,30 @@
+.toast{
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    min-width: 300px;
+}
+.show {
+    animation: show 2s ease-in-out;
+}
+@keyframes show {
+    100% {
+    bottom: 10px;
+    }
+}
+.bottom {
+    bottom: 10px;
+}
+.hide {
+    animation: hide 2s ease-in-out;
+}
+@keyframes hide {
+    100% {
+    bottom: -100px;
+    }
+}
